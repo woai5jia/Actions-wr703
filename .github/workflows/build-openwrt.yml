@@ -61,7 +61,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
-    - name: add 703n-dts
+    - name: Add 703n-dts
       run: |
         cd openwrt/target/linux/ath79/dts
         sed -i 's/0x3d0000/0xfd0000/' ar9331_tplink_tl-wr703n_tl-mr10u.dtsi
